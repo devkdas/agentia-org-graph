@@ -1,0 +1,40 @@
+{
+  "name": "agentia-org-graph",
+  "version": "0.1.0",
+  "description": "Deployment blast radius maps from metadata dependencies for Agentia CLI",
+  "author": "Kartheek Dasari",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@oclif/core": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "oclif": {
+    "commands": "./dist/commands",
+    "topics": {
+      "graph": {
+        "description": "Deployment blast radius maps"
+      }
+    }
+  },
+  "keywords": [
+    "agentia",
+    "oclif-plugin",
+    "copado",
+    "dependencies"
+  ]
+}
