@@ -117,6 +117,22 @@ Verified live on a real class:
 | `-o, --output <path>` | File path for the artifact |
 | `-j, --json` | Machine readable JSON summary |
 
+### `agentia graph orphans`
+
+| Flag | Description |
+|---|---|
+| `-t, --type <type>` | Metadata type scanned (required) |
+| `-m, --member <name>` | Single member to check instead of scanning |
+| `--source-credential-id` | Org credential ID (required) |
+| `--source-org-id` | Org ID (required) |
+| `--pipeline-id` | Pipeline ID scoping calls (required) |
+| `-n, --limit <n>` | Members scanned at most (default 20, maximum 100) |
+| `-j, --json` | Machine readable JSON output |
+
+Lists members from the metadata index, checks dependencies per member,
+and reports zero dependency candidates with connected counts. Orphan
+means untracked, never proven unused. Review before deleting anything.
+
 ### `agentia graph impact`
 
 | Flag | Description |
