@@ -117,6 +117,18 @@ Verified live on a real class:
 | `-o, --output <path>` | File path for the artifact |
 | `-j, --json` | Machine readable JSON summary |
 
+### `agentia graph impact`
+
+| Flag | Description |
+|---|---|
+| Same scope flags as blast | Type, name, credential, org, pipeline |
+| `-o, --output-dir <dir>` | Impact files directory |
+| `-j, --json` | Machine readable JSON summary |
+
+Assesses change impact with heuristic risk tiers per dependent plus
+recent pipeline activity as context, never causation. Tiers are
+documented estimates for reviewers, not verdicts.
+
 ## Configuration
 
 Scope flags only. Node IDs sanitize to safe characters with capped
